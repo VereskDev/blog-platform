@@ -1,0 +1,144 @@
+/* src/pages/EditArticlePage.scss */
+
+/* Основные стили для формы */
+.create-article-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.create-article-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.create-article-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.create-article-label {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #333;
+}
+
+.create-article-input,
+.create-article-textarea {
+  width: 95%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.create-article-textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.create-article-tags {
+  display: flex;
+  align-items: center;
+}
+
+.create-article-tag-input {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.create-article-add-tag {
+  margin-left: 10px;
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.create-article-add-tag:hover {
+  background-color: #218838;
+}
+
+.create-article-tag-list {
+  margin-top: 10px;
+}
+
+.create-article-tag-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 5px 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+.create-article-delete-tag {
+  background-color: transparent;
+  color: #dc3545;
+  border: none;
+  cursor: pointer;
+}
+
+.create-article-delete-tag:hover {
+  text-decoration: underline;
+}
+
+.create-article-submit {
+  padding: 15px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.create-article-submit:hover {
+  background-color: #0056b3;
+}
+.delete-confirm-modal {
+  width: 246px;
+  height: 105px;
+  margin-left: auto;
+  margin-bottom: auto;
+  background-color: #ffffff;
+}
+.delete-confirm-modal-image {
+  width: 16px;
+  height: 16px;
+}
+.delete-confirm-buttons {
+  display: flex;
+  flex-direction: row;
+  margin-left: 143px;
+
+  & > button {
+    background-color: #ffffff;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    width: 34px;
+    height: 24px;
+  }
+  & > button:last-child {
+    margin-left: 5px;
+    background-color: #1890ff;
+    color: white;
+    border: 1px solid #1890ff;
+  }
+}
