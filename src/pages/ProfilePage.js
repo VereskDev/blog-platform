@@ -12,7 +12,6 @@ const EditProfile = () => {
     password: "",
     image: "",
   });
-  const [errors, setErrors] = useState({});
   const [apiError, setApiError] = useState("");
 
   useEffect(() => {
@@ -69,6 +68,7 @@ const EditProfile = () => {
       );
 
       navigate("/");
+      console.log(response);
     } catch (err) {
       setApiError("Ошибка при обновлении профиля");
     }
