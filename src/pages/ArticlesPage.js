@@ -16,7 +16,6 @@ const ArticlesPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // === Получение номера страницы из URL ===
   const searchParams = new URLSearchParams(location.search);
   const currentPage = parseInt(searchParams.get("page") || "1", 10);
 
