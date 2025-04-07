@@ -1,32 +1,39 @@
 import React from "react";
+import "./Pagination.scss";
 
-const Pagination = ({ page, totalPages, setPage }) => {
-  const handlePageClick = (pageNumber) => {
-    setPage(pageNumber);
-  };
+const Pagination = ({ currentPage, totalPages, onPageChange }) => {
+  const pages = [];
 
-  const pageNumbers = [];
   for (let i = 1; i <= totalPages; i++) {
-    pageNumbers.push(i);
+    pages.push(i);
   }
 
   return (
     <div className="pagination">
-      <button onClick={() => setPage(page - 1)} disabled={page <= 1}>
-        Предыдущая
+      <button
+        className="page-button"
+        onClick={() => onPageChange(currentPage - 1)}
+        disabled={currentPage === 1}
+      >
+        {"<"}
       </button>
-      {pageNumbers.map((number) => (
+
+      {pages.map((page) => (
         <button
-          key={number}
-          onClick={() => handlePageClick(number)}
-          disabled={page === number}
-          className={page === number ? "active" : ""}
+          key={page}
+          className={`page-button ${page === currentPage ? "active" : ""}`}
+          onClick={() => onPageChange(page)}
         >
-          {number}
+          {page}
         </button>
       ))}
-      <button onClick={() => setPage(page + 1)} disabled={page >= totalPages}>
-        Следующая
+
+      <button
+        className="page-button"
+        onClick={() => onPageChange(currentPage + 1)}
+        disabled={currentPage === totalPages}
+      >
+        {">"}
       </button>
     </div>
   );
